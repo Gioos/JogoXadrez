@@ -1,4 +1,4 @@
-﻿namespace tabuleiro
+﻿namespace tabuleiro.Enums
 {
     enum Cor
     {
