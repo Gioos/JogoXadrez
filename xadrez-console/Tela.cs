@@ -13,10 +13,18 @@ class Tela
         imprimirPecasCapturas(partida);
         Console.WriteLine();
         Console.WriteLine("Turno: " + partida.turno);
-        Console.WriteLine("Aguardando jogada peça: " + partida.jogadorAtual);
-        if (partida.xeque)
+        if (!partida.terminada)
         {
-            Console.Write("XEQUE!");
+            Console.WriteLine("Aguardando jogada peça: " + partida.jogadorAtual);
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE!");
+            }
+        }
+        else
+        {
+            Console.WriteLine("XEQUEMATE!");
+            Console.WriteLine("Vencedor: " + partida.jogadorAtual);
         }
     }
 
@@ -26,7 +34,7 @@ class Tela
         Console.Write("Brancas: ");
         imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
         Console.WriteLine();
-        Console.Write("Pretas :");
+        Console.Write("Pretas: ");
         ConsoleColor aux = Console.ForegroundColor;
         Console.ForegroundColor = ConsoleColor.Yellow;
         imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
