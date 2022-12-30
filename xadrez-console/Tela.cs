@@ -14,9 +14,14 @@ class Tela
         Console.WriteLine();
         Console.WriteLine("Turno: " + partida.turno);
         Console.WriteLine("Aguardando jogada peça: " + partida.jogadorAtual);
+        if (partida.xeque)
+        {
+            Console.Write("XEQUE!");
+        }
     }
 
-    public static void imprimirPecasCapturas(PartidaDeXadrez partida){
+    public static void imprimirPecasCapturas(PartidaDeXadrez partida)
+    {
         Console.WriteLine("Peças capturadas: ");
         Console.Write("Brancas: ");
         imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
@@ -29,9 +34,11 @@ class Tela
         Console.WriteLine();
     }
 
-    public static void imprimirConjunto(HashSet<Peca> conjuto){
+    public static void imprimirConjunto(HashSet<Peca> conjuto)
+    {
         Console.Write("[");
-        foreach (Peca x in conjuto){
+        foreach (Peca x in conjuto)
+        {
             Console.Write(x + ", ");
         }
         Console.Write("]");
