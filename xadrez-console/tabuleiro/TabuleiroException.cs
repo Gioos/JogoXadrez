@@ -1,6 +1,4 @@
-﻿using System;
-using tabuleiro.Enums;
-namespace tabuleiro
+﻿namespace tabuleiro
 {
     class TabuleiroException : Exception
     {

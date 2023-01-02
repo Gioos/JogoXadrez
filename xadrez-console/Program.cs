@@ -1,6 +1,7 @@
 ﻿using tabuleiro;
 using xadrez_console;
 using xadrez;
+using tabuleiro.Enums;
 
 
 try
